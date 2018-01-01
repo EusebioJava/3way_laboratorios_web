@@ -16,8 +16,7 @@ package br.com.triway.dao;
 		public Livro consultar(Integer codigo) {
 			Livro livro = null;
 			try (Connection conexao = FabricaConexao.getConexao();
-				PreparedStatement consulta = codigo
-				conexao.prepareStatement(OBTER_POR_ID_SQL);) {
+				PreparedStatement consulta = conexao.prepareStatement(OBTER_POR_ID_SQL);) {
 				consulta.setInt(1, codigo);
 				ResultSet resultado = consulta.executeQuery();
 				if (resultado.next()) {
@@ -50,14 +49,15 @@ package br.com.triway.dao;
 					livro.setTitulo(resultado.getString("TITULO"));
 					livro.setDescricao(resultado.getString("DESCRICAO"));
 					lista.add(livro);
-				} resultado.close();
+				} 
+				resultado.close();
 			} catch (SQLException e) {
 				LOG.severe(e.toString());
 			} 
 			return lista;
 			if(titulo == null){
 				titulo = "";
-				} System.out.println("Pesquisa: "+titulo);
+				} System.out.println("Pesquisa: "+ titulo);
 				LivroDao dao = new LivroDao();
 				livros = dao.consultar(titulo);
 				if(livros.size() <= 0){
@@ -68,9 +68,30 @@ package br.com.triway.dao;
 			LivroDao dao = new LivroDao();
 			livro = dao.consultar(integer codigo);
 			return livro;
-			//OBS: dao.consultar(titulo) e dao.consultar(codigo) são métodos do LivroDao, mas que buscam atributos diferentes
+			//OBS: dao.consultar(titulo) e dao.consultar(codigo) são métodos do LivroDao, 
+			//mas que buscam atributos diferentes
 			//(um busca uma lista de livros e outro busca somente um livro).
 		}
 	}
+		@Override
+		public void alterar(Livro entidade) {
+			// TODO Stub de método gerado automaticamente
+			
+		}
+		@Override
+		public void salvar(Livro entidade) {
+			// TODO Stub de método gerado automaticamente
+			
+		}
+		@Override
+		public void remover(Livro entidade) {
+			// TODO Stub de método gerado automaticamente
+			
+		}
+		@Override
+		public Collection<Livro> listar() {
+			// TODO Stub de método gerado automaticamente
+			return null;
+		}
 	
 	}
