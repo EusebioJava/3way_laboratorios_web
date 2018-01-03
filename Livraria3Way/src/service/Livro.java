@@ -7,7 +7,7 @@
  *1. A classe Livro representa a entidade livro em nosso projeto. Obedecerá o padrão de projeto VO (Value Object) e
  *conterá os dados de um livro. 
  * */
-package model;
+package service;
 	public class Livro {
 		//
 		private int codigo;

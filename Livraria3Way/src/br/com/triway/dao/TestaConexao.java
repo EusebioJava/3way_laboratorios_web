@@ -3,6 +3,8 @@ import java.sql.*;
 //import java.sql.Connection;
 //import java.sql.SQLException;
 
+import service.FabricaConexao;
+
 public class TestaConexao {
 	public static void main(String[] args) {
 		Connection con;

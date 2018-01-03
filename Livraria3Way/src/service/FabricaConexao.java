@@ -1,4 +1,4 @@
-package br.com.triway.dao;
+package service;
 import java.sql.*;
 public class FabricaConexao {
 	static final String url = "jdbc:postgresql://localhost:5432/postgres";
