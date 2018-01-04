@@ -1,7 +1,7 @@
 package service;
 import java.sql.*;
 public class FabricaConexao {
-	static final String url = "jdbc:postgresql://localhost:5432/postgres";
+	static final String url = "jdbc:postgresql://localhost:5432/Livraria";
 	static final String usuario = "3way";
 	static final String senha = "123456";
 	public static Connection getConexao() throws SQLException {
